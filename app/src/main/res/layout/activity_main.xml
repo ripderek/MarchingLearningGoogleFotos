@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FFEB3B"
+        android:text="Google ML Kit Students"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btGallery"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="5dp"
+        android:onClick="abrirGaleria"
+        android:text="Galería"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btCamera"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/btCamera"
+        android:layout_margin="5dp"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:onClick="abrirCamera"
+        android:text="Cámara"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:layout_constraintLeft_toRightOf="@+id/btGallery"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtresults"
+        app:layout_constraintTop_toBottomOf="@+id/btGallery"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:text="Resultados:"
+        app:layout_constraintBottom_toTopOf="@id/btText"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <Button
+        android:id="@+id/btText"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="OCRfx"
+        android:text="OCR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btFace" />
+
+
+
+    <Button
+        android:id="@+id/btFace"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:onClick="Rostrosfx"
+        android:text="Rostros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
